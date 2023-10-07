@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+}
+        .black{
+            position: relative;
+            top: 500px;
+            width: 250px;
+            height: 250px;
+            background-color: black;
+            opacity: 0;
+            transition: all 1s ease-in-out;
+
+            /* visibility: hidden; */
+        }
+        .opacity-0{
+            opacity: 1;
+            top: 0;
+
+
+            /* visibility: visible; */
+            /*
+             display: block; */
+        }
+        button{
+            position: absolute;
+            bottom: 100px;
+        }
+        .green{
+            position: relative;
+            top: 500px;
+            left: 0px;
+            width: 250px;
+            height: 250px;
+            background-color: green;
+            opacity: 1;
+            transition: all 1s ease-in-out;
+        }
+        .opacity-1{
+            opacity: 1;
+            top: 0px;
+            left: 500px;
+            bottom: -100px;
+        }
+        .d-flex{
+            display: flex;
+            align-items: center;
+            background-color: aliceblue;
+            height: 50vh;
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <div id="box" class="black">
+    </div>
+
+    <section class="d-flex">
+        <div id="box2" class="green"></div>
+    </section>
+    
+</section>
+<button onclick="fadeOut()">Click me</button>
+    <script>
+        function fadeOut(){
+            var box = document.getElementById("box");
+            var box2 = document.getElementById("box2");
+
+
+            box.classList.add("opacity-0");
+            box2.classList.add("opacity-1");
+        }
+    </script>
+</body>
+</html>
